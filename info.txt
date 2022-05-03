@@ -1,0 +1,1 @@
+Data uruchomienia 03-05-2022 Autor skryptu: Yevhenii Soliuk port TCP:80
