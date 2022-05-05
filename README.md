@@ -69,3 +69,5 @@ b) docker run -it --rm -p 8000:80 --name zadanie1 zadanie1:v1.0
 c) -
 
 d) docker image inspect zadanie1:v1.0 -f '{{.RootFS.Layers}}’
+
+<img src="https://github.com/YevheniiSoliuk/Zadanie-Chmury/blob/master/Wynik%20sprawdzenie%20liczby%20warstw%20obrazu.jpg">
