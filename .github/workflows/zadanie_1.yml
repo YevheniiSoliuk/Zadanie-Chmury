@@ -6,11 +6,11 @@ on:
 
 jobs:
   build-push-images:
-    name: Budowa obrazu i publikacja na repozytorium
+    name: Budowa i publikacja obrazw na repozytorium
     runs-on: ubuntu-latest
 
     steps:
-      
+
       - name: Checkout code
         uses: actions/checkout@v2
         
@@ -21,12 +21,12 @@ jobs:
           image: tonistiigi/binfmt:latest
           platforms: all
 
-      - name: Bulidx
+      - name: Buildx set-up
         id: buildx
         uses: docker/setup-buildx-action@v1
-        
+
       - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v1 
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
@@ -40,10 +40,6 @@ jobs:
           push: true
           tags: |
             svikt02/zadanie1:v1.0
-          platforms: linux/arm/v7,linux/arm64/v8,linux/amd64
           cache-from: type=registry,ref=svikt02/zadanie1:v1.0
           cache-to: type=registry,ref=svikt02/zadanie1:v1.0,mode=max
-
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
-          echo test, and deploy your project.
+          platforms: linux/arm/v7,linux/arm64/v8,linux/amd64
