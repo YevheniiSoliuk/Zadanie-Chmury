@@ -71,3 +71,16 @@ c) -
 d) docker image inspect zadanie1:v1.0 -f '{{.RootFS.Layers}}’
 
 <img src="https://github.com/YevheniiSoliuk/Zadanie-Chmury/blob/master/Wynik%20sprawdzenie%20liczby%20warstw%20obrazu.jpg">
+
+## 4. Zbudowanie wieloplatformowego kontenera w oparciu o GitHub Actions
+<img src="https://github.com/YevheniiSoliuk/Zadanie-Chmury/blob/master/Zbudowanie%20obrazu.jpg">
+
+<aside>
+  Pomyślnie zbudowany kontener w GitHub Actions
+</aside>
+
+<img src="https://github.com/YevheniiSoliuk/Zadanie-Chmury/blob/master/Zbudowany%20kontener.jpg">
+
+<aside>
+  Stworzony repozytorium z kontenerem na DockerHub
+</aside>
