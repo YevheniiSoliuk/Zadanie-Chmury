@@ -51,18 +51,16 @@ COPY index.php /var/www/html
 ```
 
 <aside>
-🐋 Dany obraz kontenera jest tworzony na podstawie scratch-u z użyciem systemu operacyjnego Alpine mini root file system. Na tym systemie instaluje apache i php. Po czym usuwam plik z keszem oraz tworzę dyrektorie dla apacha. Usuwam z htdocs plik .html i przenoszę plik z programem do tego miejsca. Również ustawiam dla pliku prawa do wykonywania. Po ustawieniu portu, na którym nasłuchuje serwer wykonuję polecenie do uruchomienia serwera oraz wyświetlaniu informacji z logów.
-
+🐋 Dany obraz kontenera miał być tworzony na podstawie scratch-u z użyciem systemu operacyjnego Alpine mini root file system. Z jakigoś powodu nic nie wyszło, więc użyłem obrazu zbudowanego na ubuntu z zainstalowanym apache i php.
 </aside>
 
 ## 3. Użyte polecenia
 
 a) DOCKER_BUILDKIT=1 docker build --progress=plain -f Dockerfile2 -t zadanie1:v1.0 .
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de0f7105-3b09-4cbc-8083-329c0ce0f819/Untitled.png)
+![Screenshot](screenshot.png)
 
 > Utworzony obraz kontenera “zadanie1”
-> 
 
 b) docker run -it --rm -p 8000:80 --name zadanie1 zadanie1:v1.0
 
