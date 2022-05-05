@@ -64,7 +64,7 @@ a) DOCKER_BUILDKIT=1 docker build --progress=plain -f Dockerfile2 -t zadanie1:v1
 
 b) docker run -it --rm -p 8000:80 --name zadanie1 zadanie1:v1.0
 
-![Test Image 2](“Uruchomiony serwer.png”)
+![Test Image 2](“Uruchomiony serwer.jpg”)
 
 c) -
 
