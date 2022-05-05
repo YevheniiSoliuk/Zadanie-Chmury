@@ -58,7 +58,7 @@ COPY index.php /var/www/html
 
 a) DOCKER_BUILDKIT=1 docker build --progress=plain -f Dockerfile2 -t zadanie1:v1.0 .
 
-![Test Image 1](“Zbudowany obraz.png”)
+<img src="https://github.com/YevheniiSoliuk/Zadanie-Chmury/blob/master/Uruchomiony%20serwer.jpg">
 
 > Utworzony obraz kontenera “zadanie1”
 
