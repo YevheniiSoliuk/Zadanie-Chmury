@@ -1,0 +1,38 @@
+name: GitHub Action do zbudowania obrazu i umieszczeniu go na DockerHub
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-push-images:
+    name: Budowa obrazu i publikacja na repozytorium
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Bulidx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+      
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: ./
+          file: ./Dockerfile2
+          push: true
+          tags: svikt02/zadanie1:v1.0
+
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+          echo test, and deploy your project.
