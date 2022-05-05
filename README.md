@@ -58,13 +58,13 @@ COPY index.php /var/www/html
 
 a) DOCKER_BUILDKIT=1 docker build --progress=plain -f Dockerfile2 -t zadanie1:v1.0 .
 
-![Screenshot](Zbudowany obraz.png)
+![Test Image 1](“Zbudowany obraz.png”)
 
 > Utworzony obraz kontenera “zadanie1”
 
 b) docker run -it --rm -p 8000:80 --name zadanie1 zadanie1:v1.0
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/58c6500d-b0a0-4003-8207-5230967f0c26/Untitled.png)
+![Test Image 2](“Uruchomiony serwer.png”)
 
 c) -
 
