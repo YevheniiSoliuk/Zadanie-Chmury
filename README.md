@@ -58,7 +58,7 @@ COPY index.php /var/www/html
 
 a) DOCKER_BUILDKIT=1 docker build --progress=plain -f Dockerfile2 -t zadanie1:v1.0 .
 
-![Screenshot](screenshot.png)
+![Screenshot](Zbudowany obraz.png)
 
 > Utworzony obraz kontenera “zadanie1”
 
