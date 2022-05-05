@@ -42,4 +42,4 @@ jobs:
             svikt02/zadanie1:v1.0
           cache-from: type=registry,ref=svikt02/zadanie1:v1.0
           cache-to: type=registry,ref=svikt02/zadanie1:v1.0,mode=max
-          platforms: linux/arm/v7,linux/arm64/v8,linux/amd64
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
